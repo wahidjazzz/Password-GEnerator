@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="password-generator">
+            <h2>Password Generator</h2>
+            <div class="password">
+                <p id="passwordBox">CLICK GENERATE</p>
+            </div>
+          	<h3 class:"options-name">LENGTH <span id="rangeValue">6</span></h3>
+            <div class="option">
+                <label for="length">4</label>
+                <input type="range" id="length" min="4" max="32" value="6" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+                <label for="length">32</label>
+            </div>
+          	<h3 class:"options-name">SETTINGS</h3>
+              <div class="option">
+                <label for="upperCase">Include upperCase</label>
+                <input type="checkbox" id="upperCase" checked>
+            </div>
+            <div class="option">
+                <label for="lowerCase">Include lowerCase</label>
+                <input type="checkbox" id="lowerCase" checked>
+            </div>
+            <div class="option">
+                <label for="number">Include Number</label>
+                <input type="checkbox" id="number" checked>
+            </div>
+            <div class="option">
+                <label for="symbol">Include Symbol</label>
+                <input type="checkbox" id="symbol" checked>
+            </div>
+            <button class="btn" id="generate" onclick="createPassword()">Generate Password</button>
+        </div>
+    </div>
+</body>
+
+</html>
